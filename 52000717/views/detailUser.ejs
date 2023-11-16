@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Details</title>
+    <link rel="stylesheet" type="text/css" href="/css/detailUser.css">
+</head>
+
+<body>
+    <h1>User Details</h1>
+    <% if (user) { %>
+        <div class="user-details">
+            <p><strong>ID:</strong>
+                <%= user.id %>
+            </p>
+            <p><strong>Name:</strong>
+                <%= user.name %>
+            </p>
+            <p><strong>Email:</strong>
+                <%= user.email %>
+            </p>
+            <p><strong>Gender:</strong>
+                <%= user.gender %>
+            </p>
+            <p><strong>Active:</strong>
+                <%= user.active %>
+            </p>
+        </div>
+        <% } %>
+</body>
+
+</html>

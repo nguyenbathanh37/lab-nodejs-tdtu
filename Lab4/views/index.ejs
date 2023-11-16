@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <h1>User List</h1>
+  <table class="table-light table-striped" cellpadding="10" cellspacing="10" border="0" style="border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.gender %></td>
+          <td>
+            <a href="/user/<%= user.id %>">View</a>
+            <a href="/user/edit/<%= user.id %>">Edit</a>
+            <form action="/user/<%= user.id %>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure?')">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <a href="/user/new">Add New User</a>
+</body>
+</html>

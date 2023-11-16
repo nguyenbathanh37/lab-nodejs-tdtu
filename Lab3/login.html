@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+
+    <style>
+        #email,
+        #password {
+            height: 25px;
+            width: 400px;
+            margin: 10px;
+            display: block;
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(23, 121, 225);
+            color: white;
+            border: white;
+            border-radius: 5px;
+        }
+
+        .error {
+            width: 400px;
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Đăng nhập</h1>
+    <form action="/login" method="post">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter email">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter password">
+        <div class="alert alert-danger error">Sai Email hoặc mật khẩu</div>
+        <button type="submit">Đăng nhập</button>
+    </form>
+</body>
+
+</html>

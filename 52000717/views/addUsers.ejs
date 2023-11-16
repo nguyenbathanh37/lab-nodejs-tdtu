@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/addUsers.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Thêm người dùng mới </title>
+</head>
+
+<body>
+    <a class="return-home" href="/">Quay lại trang chủ</a>
+    <h1>Thêm Người Dùng Mới</h1>
+    <form action="/add-users" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" p><br><br>
+
+        <label for="gender">Gender</label>
+        <input type="text" id="price" name="gender"><br><br>
+
+        <label for="email">Email</label>
+        <input type="text" id="price" name="email"><br><br>
+
+        <label for="status">Status</label>
+        <textarea id="description" name="status"></textarea><br><br>
+        <% if (typeof error !=='undefined' && error) { %>
+            <p class="error">
+                <%= error %>
+            </p>
+            <% } %>
+                <button type="submit">Thêm người dùng</button>
+    </form>
+</body>
+
+</html>

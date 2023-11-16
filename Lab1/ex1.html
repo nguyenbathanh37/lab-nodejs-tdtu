@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bài tập tải ảnh động bằng Ajax</h1>
+    <input type="text" name="url" id="url" value="Nhập URL">
+    <input type="button" value="Tải ảnh" style="color: #fff; background-color: red;">
+    <img src="" alt="Ảnh nè">
+
+</body>
+<script>
+    Promise.resolve('Success!')
+    .then(() => {
+        throw Error('Oh noes!')
+    })
+    .catch(error => {
+        return 'actually, that worked'
+    })
+    .then(data => {
+        throw Error('the fails!')
+    })
+    .catch(error => console.log(error.message))
+</script>
+</html>

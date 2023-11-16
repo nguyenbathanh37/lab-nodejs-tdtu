@@ -1,0 +1,172 @@
+table {
+    border-collapse: collapse;
+    margin: auto auto;
+    width: 80%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 18px;
+
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+h4 {
+    text-align: center;
+
+}
+
+h1,
+h4 {
+    padding-bottom: 18px;
+}
+
+.add-users:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.alert {
+    text-align: center;
+
+}
+
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.dialog-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dialog-box h1 {
+    margin-top: 0;
+}
+
+.dialog-box p {
+    margin: 0 0 20px;
+}
+
+.dialog-box button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dialog-box button.cancel {
+    background-color: #6c757d;
+}
+
+#user-dialog {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+
+
+#user-dialog label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#user-dialog input,
+#user-dialog textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#user-dialog button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#user-dialog button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#user-dialog #cancel {
+    margin-left: 30px;
+    background-color: #a1a1a1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#user-dialog #cancel:hover {
+    background-color: #878787;
+}
+
+#user-dialog h3 {
+    color: #45a049;
+}
+
+/* thiết lập style cho thẻ a */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+/* thiết lập style cho class active */
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* thêm màu nền khi người dùng hover vào class không active */
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}

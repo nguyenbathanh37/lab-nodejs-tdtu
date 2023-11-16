@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="css/home.css">
+    <title>Trang chủ</title>
+</head>
+
+<body>
+    <h1>Danh sách người dùng</h1>
+    <h4><a href="http://localhost:3000/add-users" class="add-users">Thêm người dùng mới</a></h4>
+    <div class="notify">
+        <% if (messages.length> 0) { %>
+            <div class="alert alert-success" role="alert">
+                <%= messages %>
+            </div>
+            <% } %>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tbody>
+            <% users.forEach(function(user) { %>
+                <tr>
+                    <td>
+                        <%= user.id %>
+                    </td>
+                    <td>
+                        <%= user.name %>
+                    </td>
+                    <td>
+                        <%= user.email %>
+                    </td>
+                    <td>
+                        <%= user.gender %>
+                    </td>
+                    <td>
+                        <%= user.status %>
+                    </td>
+                    <td>
+                        <button class="delete">Xóa</button>
+                        <button class="edit">Chỉnh sửa</button>
+                        <button class="detail">Xem chi tiết</button>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+
+    <!-- {{!-- confirm dialog --}} -->
+    <div class="dialog" style="display:none;">
+        <div class="dialog-box">
+            <h1>Xác nhận xóa</h1>
+            <p>Bạn có chắc chắn muốn xóa phần tử này?</p>
+            <button id="confirm-delete">Xóa</button>
+            <button onclick="closeDialog()" class="cancel">Hủy</button>
+        </div>
+    </div>
+
+
+    <!-- {{!--edit dialog--}} -->
+    <div id="user-dialog">
+        <form action="/updateUser" method="post" id="form-edit">
+            <h3>Chỉnh sửa người dùng</h3>
+            <input type="hidden" id="id" name="id" value="">
+            <label for="user-name">Tên người dùng</label>
+            <input type="text" id="user-name" name="name" required>
+            <label for="user-email">Email:</label>
+            <input type="text" id="user-email" name="email" required>
+            <label for="user-status">Status:</label>
+            <input type="text" id="user-status" name="status" required>
+            <button id="save" type="submit">Lưu</button>
+            <button onclick="closeDialogUpdate()" id="cancel">Hủy</button>
+        </form>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>

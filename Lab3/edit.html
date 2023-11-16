@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        input,
+        textarea {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Quay lại</a>
+    <h1>Chỉnh sửa sản phẩm</h1>
+    <form action="/edit" method="post">
+        <label for="nameproduct">Tên sản phẩm</label>
+        <input type="text" name="nameproduct" id="nameproduct" placeholder="Nhập tên sản phẩm">
+        <label for="priceproduct">Giá sản phẩm</label>
+        <input type="text" name="priceproduct" id="priceproduct" placeholder="Nhập giá bán">
+        <label for="imgproduct">Ảnh sản phẩm</label>
+        <input type="file" name="imgproduct" id="imgproduct" placeholder="Chọn ảnh">
+        <label for="desproduct">Mô tả</label>
+        <textarea name="desproduct" id="desproduct" cols="30" rows="10"></textarea>
+        <button class="btn btn-success" type="submit">Sửa sản phẩm</button>
+    </form>
+</body>
+</html>
